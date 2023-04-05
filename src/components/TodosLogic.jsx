@@ -1,19 +1,23 @@
 import { useState } from 'react';
-//other imported components here
+import InputTodo from './InputTodo';
+import TodoItem from './TodoItem';
+import TodosList from './TodosList';
+import { v4 as uuidv4 }from "uuid";
+
 const TodosLogic = () => {
     const [Todos, setTodos] = useState([
         {
-            id: 1,
+            id: uuidv4(),
             title: 'setup development evironment',
             compelted: true,
         },
         {
-            id: 2,
+            id: uuidv4(),
             title: 'develop website and  add content',
             compelted: false,
         },
         {
-            id: 3,
+            id: uuidv4(),
             title: 'deploy to live serve',
             compelted: false,
         },
@@ -36,7 +40,7 @@ const TodosLogic = () => {
     };
     const addTodoItem = (title) => {
 const newTodo = {
-    id: 4,
+    id: uuidv4(),
     title: title,
     completed: false,
 };

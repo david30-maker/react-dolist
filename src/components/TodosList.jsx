@@ -1,5 +1,4 @@
-// ...
-const TodosList = ({ todosProps, handleChange, delTodo }) => {
+const TodosList = ({ todosProps, handleChange }) => {
   const delTodo = () => {
     setTodos([
       ...todos.filetr((todo) => {
